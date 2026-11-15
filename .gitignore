@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.log
+
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# README — личные заметки, в репозиторий не попадают
+README.md
