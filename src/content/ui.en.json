@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Grigory Shchelokaev — Software Engineering, St Petersburg University"
+  },
+  "nav": {
+    "label": "Navigation",
+    "about": "About",
+    "interests": "Beyond code",
+    "skills": "Skills",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "photoAlt": "Portrait of Grigory Shchelokaev",
+    "photoPending": "Photo coming soon",
+    "scroll": "Scroll down"
+  },
+  "sections": {
+    "about": {
+      "kicker": "Biography",
+      "title": "About me"
+    },
+    "interests": {
+      "kicker": "Interests",
+      "title": "Beyond code"
+    },
+    "skills": {
+      "kicker": "Toolkit",
+      "title": "Skills and projects"
+    },
+    "contacts": {
+      "kicker": "Get in touch",
+      "title": "Contacts"
+    }
+  },
+  "skills": {
+    "languages": "Languages",
+    "tools": "Tools and environment"
+  },
+  "contacts": {
+    "lead": "Write if you have a question, an offer, or simply want to argue about Go, networks or Liverpool FC.",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "rights": "© {{year}} Grigory Shchelokaev",
+    "madeWith": "React, Vite and Tailwind",
+    "backToTop": "Back to top"
+  },
+  "language": {
+    "label": "Switch language",
+    "ru": "RU",
+    "en": "EN"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  }
+}
