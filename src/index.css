@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-ink: #0a0a0a;
+  --color-panel: #111111;
+  --color-accent: #8ab4ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: rgb(255 255 255 / 0.78);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgb(138 180 255 / 0.28);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* Отступ под фиксированную навигацию при переходе по якорю */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Уважаем системную настройку «меньше движения» */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Оформление markdown-текста из src/content/*.md */
+.markdown {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.markdown > * + * {
+  margin-top: 1rem;
+}
+
+.markdown h3 {
+  margin-top: 2.25rem;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.markdown h3:first-child {
+  margin-top: 0;
+}
+
+.markdown h4 {
+  margin-top: 1.75rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.markdown p {
+  max-width: 68ch;
+}
+
+.markdown ul {
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.markdown ul li::marker {
+  color: rgb(255 255 255 / 0.35);
+}
+
+.markdown li + li {
+  margin-top: 0.4rem;
+}
+
+.markdown strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.markdown a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgb(138 180 255 / 0.4);
+  text-underline-offset: 3px;
+}
+
+.markdown a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+.markdown code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+.markdown blockquote {
+  border-left: 2px solid rgb(255 255 255 / 0.15);
+  padding-left: 1rem;
+  color: rgb(255 255 255 / 0.6);
+}
